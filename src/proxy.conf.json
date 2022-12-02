@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://localhost:8080",
+    "target": "http://api-prod-td6-r18nfj.mo4.mogenius.io:80",
     "secure": false
   }
 }
