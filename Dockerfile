@@ -1,2 +1,2 @@
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
+FROM postgres
+ENV POSTGRES_DB covid-db
