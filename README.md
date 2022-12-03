@@ -33,18 +33,18 @@ Pour la section **Repository**, choississez la section **public**. rentrez le li
 
 Dans la section **Ressource limits**, procédez comme le montre l'image suivante : 
 
-![image-20221203085750974](.\images\image-20221203085750974.png)
+<img src=".\images\image-20221203085750974.png" alt="image-20221203085750974" style="zoom:80%;" />
 
 Dans la section **Environnment variables**, ajoutez 2 variables : 
 
 - **POSTGRES_USER** en plain text avec le nom d'utilisateur que vous souhaitez.
 - **POSTGRES_PASSWORD** en key vault pour le mot de passe que vous souhaitez. Vous pouvez créer un nouneau secret en cliquant sur le bouton en dessous d champ *create new secret*.
 
-![image-20221203090318890](.\images\image-20221203090318890.png)
+<img src=".\images\image-20221203090318890.png" alt="image-20221203090318890" style="zoom:80%;" />
 
 Pour la section **ports**, ajoutez le port **5432** en **TCP** et vérifiez que la case **Expose** soit bien cochée. 
 
-![image-20221203090645362](.\images\image-20221203090645362.png)
+<img src=".\images\image-20221203090645362.png" alt="image-20221203090645362" style="zoom:80%;" />
 
 Et vous pouvez donc créer le service.
 
@@ -64,19 +64,19 @@ il faut aussi modifier **l'url** :
 
 - récupérez **l'external hostname** comme dans l'image suivante :
 
-  ![image-20221203091610141](.\images\image-20221203091610141.png)
+  <img src=".\images\image-20221203091610141.png" alt="image-20221203091610141" style="zoom:80%;" />
 
 - dans la section **url** de l'application.yaml, remplacez par : **jdbc:postgresql://<l'external hostname>/covid-db**
 
-![image-20221203091823388](.\images\image-20221203091823388.png)
+<img src=".\images\image-20221203091823388.png" alt="image-20221203091823388" style="zoom:80%;" />
 
 Une fois ceci fait, allez dans **\covid-api\src\main\resources\db\changelog\db.changelo-master.yaml** et changez **l'username** par celui que vous aviez préalablement choisi.
 
-![image-20221203092119392](.\images\image-20221203092119392.png)
+<img src=".\images\image-20221203092119392.png" alt="image-20221203092119392" style="zoom:80%;" />
 
 Ouvrez maintenant un invite de commande à la racine de votre copie locale et lancez la commande **docker compose up** : 
 
-![image-20221203092314507](.\images\image-20221203092314507.png)
+<img src=".\images\image-20221203092314507.png" alt="image-20221203092314507" style="zoom:80%;" />
 
 Et voila le tout lancé ! 
 
