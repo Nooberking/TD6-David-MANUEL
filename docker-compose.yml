@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+
+  back:
+    build: ./covid-api
+    container_name: covid-api
+    ports:
+      - 8080:8080
+    
+  front: 
+    build: ./covid-front
+    container_name: front
+    ports:
+      - 4200:4200
+    links:
+      - back
